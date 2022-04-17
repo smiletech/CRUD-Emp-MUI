@@ -119,10 +119,14 @@ setValue("");
       setValue(event.target.value);
     };
   
-    const top100Films = ["akjkj", "jhjhj", "jhjh"];
-  
+    const State = ["Maharashtra", "Bihar", "Goa"];
+    const City = ["North Goa", "Patna", "Pune"];
+    
+    const flatProps1 = {
+      options: City.map((option) => option),
+    };
     const flatProps = {
-      options: top100Films.map((option) => option),
+      options: State.map((option) => option),
     };
   return (
     <>
@@ -250,7 +254,7 @@ setValue("");
             )}
           />
           <Autocomplete
-            {...flatProps}
+            {...flatProps1}
             onChange={(event, value) => setalldata(
               {
                 MobileNum:alldata.MobileNum,

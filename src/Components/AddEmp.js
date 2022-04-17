@@ -36,9 +36,8 @@ const [slider, setslider] =React.useState(3)
 
 
   React.useEffect(()=>{
-   
-
-  },[])
+  
+  },[alldata])
 
   
 const AddHandler=()=>{
@@ -116,9 +115,15 @@ navigate("/employees");
     
     })
   };
-  const top100Films = ["akjkj", "jhjhj", "jhjh"];
+
+  const State = ["Maharashtra", "Bihar", "Goa"];
+  const City = ["North Goa", "Patna", "Pune"];
+  
+  const flatProps1 = {
+    options: City.map((option) => option),
+  };
   const flatProps = {
-    options: top100Films.map((option) => option),
+    options: State.map((option) => option),
   };
 
 console.log(alldata.Name)
@@ -256,7 +261,7 @@ console.log(alldata.MobileNum);
           
           />
           <Autocomplete
-            {...flatProps}
+            {...flatProps1}
            onChange={(event, value) => setalldata(
               {
                 MobileNum:alldata.MobileNum,
@@ -348,7 +353,7 @@ console.log(alldata.MobileNum);
 
 
         <div className="display">
-        <Box sx={{ width: 200,marginRight:40}}>
+        <Box sx={{ width: 200,marginRight:20}}>
           <label>communication skills</label>
       <Slider
         aria-label="communication skills"

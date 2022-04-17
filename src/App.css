@@ -16,3 +16,9 @@
 .margin{
   margin: 20px 0px;
 }
+.margin1{
+  margin: 20px 0px;
+  margin-right: 40px;
+  display: flex;
+  justify-content: flex-end ;
+}
